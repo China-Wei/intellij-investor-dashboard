@@ -16,7 +16,7 @@ class StockerRefreshAction : AnAction() {
     }
 
     override fun actionPerformed(e: AnActionEvent) {
-        StockerAppManager.myApplicationMap[e.project]?.shutdownThenClear()
+//        StockerAppManager.myApplicationMap[e.project]?.shutdownThenClear()
         StockerAppManager.myApplicationMap[e.project]?.schedule()
     }
 

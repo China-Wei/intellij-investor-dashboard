@@ -2,7 +2,7 @@
     <id>com.vermouthx.intellij-investor-dashboard</id>
     <name>Stocker</name>
     <vendor email="developer@nszihan.com" url="https://nszihan.com">Zihan Ma</vendor>
-    <idea-version since-build="233"/>
+    <idea-version since-build="223"/>
     <depends>com.intellij.modules.platform</depends>
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.vermouthx.stocker.settings.StockerSetting"/>
@@ -13,7 +13,12 @@
         <applicationConfigurable parentId="tools" displayName="Stocker"
                                  id="com.vermouthx.stocker.views.windows.StockerSettingWindow"
                                  instance="com.vermouthx.stocker.views.windows.StockerSettingWindow"/>
+
+        <applicationService serviceImplementation="com.vermouthx.stocker.utils.MyConfigService" />
     </extensions>
+
+
+
     <actions>
         <group id="com.vermouthx.stocker.actions.StockerActionGroup" text="Stocker" popup="true" icon="/icons/logo.png">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
